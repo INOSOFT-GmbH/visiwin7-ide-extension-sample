@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!--Change this to the location of your VisiWin 7 IDE installation directory.-->
+    <IdeInstallationDir>C:\Program Files (x86)\INOSOFT GmbH\VisiWin 7\Development\bin</IdeInstallationDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="AboutDialog\About-Dialog.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VisiWin7.Development.Shared">
+      <HintPath>$(IdeInstallationDir)\VisiWin7.Development.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="VisiWin7.IDE.Extensibility">
+      <HintPath>$(IdeInstallationDir)\VisiWin7.IDE.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="VisiWin7.IDE.MEF">
+      <HintPath>$(IdeInstallationDir)\VisiWin7.IDE.MEF.dll</HintPath>
+    </Reference>
+    <Reference Include="VisiWin7.PDB.Global">
+      <HintPath>$(IdeInstallationDir)\VisiWin7.PDB.Global.dll</HintPath>
+    </Reference>
+    <Reference Include="VisiWin7.Provider">
+      <HintPath>$(IdeInstallationDir)\VisiWin7.Provider.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <ItemGroup>
+      <OutputFiles Include="$(MSBuildProjectDirectory)\$(OutputPath)\$(ProjectName).*"/>
+    </ItemGroup>
+    <Copy SourceFiles="@(OutputFiles)" DestinationFolder="$(IdeInstallationDir)\Extensions" />
+  </Target>
+
+</Project>

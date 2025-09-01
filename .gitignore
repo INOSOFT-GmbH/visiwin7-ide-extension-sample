@@ -348,13 +348,7 @@ healthchecksdb
 # Zip-Dateien
 *.zip
 
-# VisiWin Verzeichnisse
-/Source/vw7IniFile/out
-# /Shared Binaries
-/Transfer
-/Source/Driver/Transfer
-
-# VisiWin Projekte
+# VisiWin projects
 *.[Vv][Ww][Aa]
 *.vwh
 *.vaa
@@ -370,7 +364,7 @@ healthchecksdb
 *.Device.config
 *.vwsettings
 
-# Log-Dateien im Projektverzeichnis
+# Project directory log files
 VariableImportLog.log
 *Logger.txt
 
@@ -386,7 +380,7 @@ VariableImportLog.log
 *.mc
 *.dll
 
-# Runtime- und Hilfsdatien aus VisiWin Projekten 
+# Project runtime- and helper files
 *.vw7.xaml
 *.idx
 UserManagerRuntimeConfig.urc
