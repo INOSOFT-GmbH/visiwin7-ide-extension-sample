@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38F96EAE-9B0F-4F7E-9293-B48456FA7F90}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
+		..\.gitignore = ..\.gitignore
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisiWin7.IDE.ExtensionSample", "VisiWin7.IDE.ExtensionSample\VisiWin7.IDE.ExtensionSample.csproj", "{C9576EF3-9116-E0C6-A9D8-2C6CF4A7D1D3}"
